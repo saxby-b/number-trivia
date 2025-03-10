@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    width: 60%;
+}
+
+button {
+    border-radius: 100%;
+}
 .hide {
     display: none;
 }
