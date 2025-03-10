@@ -3,13 +3,28 @@
 }
 
 body {
+    background-image: url('../img/background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.content-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: #ebe8ea;
+
+
 }
 
 h1 {
-    width: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: 72px;
+    padding-top: 40px;
 }
 
 button {
@@ -17,4 +32,8 @@ button {
 }
 .hide {
     display: none;
+}
+
+li {
+    list-style: none;
 }
