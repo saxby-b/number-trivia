@@ -3,7 +3,7 @@ let numberTrivia = document.querySelector(".number-trivia");
 const fetchNumberTrivia = async function() {
     const res = await fetch("http://numbersapi.com/27");
     const trivia = await res.text();
-    newLi();
+    console.log(trivia);
 }
 
 fetchNumberTrivia();
