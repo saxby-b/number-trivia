@@ -1,5 +1,5 @@
 let numberTrivia = document.querySelector(".number-trivia");
-const button = document.querySelector("button");
+const triviaButton = document.querySelector(".trivia");
 
 const fetchNumberTrivia = async function () {
   let res = await fetch("http://numbersapi.com/27");
@@ -14,7 +14,7 @@ const fetchNumberTrivia = async function () {
 
 
 
-button.addEventListener("click", function () {
+triviaButton.addEventListener("click", function () {
   numberTrivia.classList.remove("hide");
   fetchNumberTrivia();
 });
