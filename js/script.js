@@ -2,7 +2,7 @@ let numberTrivia = document.querySelector(".number-trivia");
 const triviaButton = document.querySelector(".trivia");
 const finishButton = document.querySelector(".finish");
 const change = document.querySelector(".change span");
-let triviaArray = []
+let triviaArray = [];
 let li = document.createElement("li");
 
 const fetchNumberTrivia = async function () {
@@ -11,16 +11,12 @@ const fetchNumberTrivia = async function () {
   trivia.trim();
   console.log(trivia);
   triviaArray = trivia.split("\n");
-  const randomIndex = Math.floor(Math.random() * triviaArray.length)
+  const randomIndex = Math.floor(Math.random() * triviaArray.length);
   const randomTrivia = triviaArray[randomIndex].trim();
- // let li = document.createElement("li");
   li.innerText = trivia;
   numberTrivia.append(li);
   triviaArray = li;
 };
-
-
-
 
 triviaButton.addEventListener("click", function () {
   numberTrivia.classList.remove("hide");
@@ -30,15 +26,15 @@ triviaButton.addEventListener("click", function () {
 });
 
 finishButton.addEventListener("click", function () {
-    numberTrivia.classList.add("hide");
-    triviaButton.classList.remove("hide");
-    finishButton.classList.add("hide");
-    for (trivia of triviaArray) {
-        if (triviaArray[trivia]) {
-            numberTrivia.remove(li);
-        }
+  numberTrivia.classList.add("hide");
+  triviaButton.classList.remove("hide");
+  finishButton.classList.add("hide");
+  for (trivia of triviaArray) {
+    if (triviaArray[trivia]) {
+      numberTrivia.remove(li);
     }
-})
+  }
+});
 
 let d = new Date();
 let year = d.getFullYear();
