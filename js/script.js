@@ -1,15 +1,22 @@
 let numberTrivia = document.querySelector(".number-trivia");
 const triviaButton = document.querySelector(".trivia");
 const finishButton = document.querySelector(".finish");
+const change = document.querySelector(".change span");
+let triviaArray = []
+let li = document.createElement("li");
 
 const fetchNumberTrivia = async function () {
-  let res = await fetch("http://numbersapi.com/27");
+  let res = await fetch("http://numbersapi.com/random?min=1&max=20");
   let trivia = await res.text();
   trivia.trim();
   console.log(trivia);
-  let li = document.createElement("li");
+  triviaArray = trivia.split("\n");
+  const randomIndex = Math.floor(Math.random() * triviaArray.length)
+  const randomTrivia = triviaArray[randomIndex].trim();
+ // let li = document.createElement("li");
   li.innerText = trivia;
   numberTrivia.append(li);
+  triviaArray = li;
 };
 
 
@@ -26,4 +33,13 @@ finishButton.addEventListener("click", function () {
     numberTrivia.classList.add("hide");
     triviaButton.classList.remove("hide");
     finishButton.classList.add("hide");
+    for (trivia of triviaArray) {
+        if (triviaArray[trivia]) {
+            numberTrivia.remove(li);
+        }
+    }
 })
+
+let d = new Date();
+let year = d.getFullYear();
+change.innerText = year;
