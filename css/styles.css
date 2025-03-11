@@ -5,11 +5,13 @@
 body {
     background-image: url('../img/background.jpg');
     background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-repeat: repeat;
+    background-position: 10% 40%;
     width: 100%;
     height: 700px;
     background-color: #ebe8ea;
+    font-size: 1rem;
+    padding-top: 80px;
 }
 
 .content-wrapper {
@@ -19,6 +21,7 @@ body {
     flex-direction: column;
     background-color: #ebe8ea;
     width: 100%;
+    border-radius: 25%;
 
 
 }
@@ -26,12 +29,16 @@ body {
 h1 {
     width: 100%;
     font-size: 40px;
-    padding-top: 40px;
+    padding-top: 2.5em;
+    font-family:"Lilita One", sans-serif;
+    text-align: center;
 }
 
 button {
-    border-radius: 100%;
+    border-radius: 50%;
+    padding: 10px;
     font-size: 30px;
+    font-family: "Oi", sans-serif;
 }
 .hide {
     display: none;
@@ -39,7 +46,8 @@ button {
 
 li {
     list-style: none;
-    font-size: 24px;
+    font-size: 1.5em;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
@@ -49,7 +57,7 @@ li {
 @media only screen and (min-width: 1200px) {
 
     h1 {
-        font-size: 72px;
+        font-size: 4.5em;
         text-align: center;
     }
 
