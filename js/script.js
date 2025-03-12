@@ -6,7 +6,7 @@ let triviaArray = [];
 let li = document.createElement("li");
 
 const fetchNumberTrivia = async function () {
-  let res = await fetch("http://numbersapi.com/random?min=1&max=20");
+  let res = await fetch("http://numbersapi.com/random?min=1&max=200");
   let trivia = await res.text();
   trivia.trim();
   console.log(trivia);
