@@ -5,22 +5,15 @@ const change = document.querySelector(".change span");
 let triviaArray = [];
 let li = document.createElement("li");
 
-const fetchNumberTrivia = async function () {
-  let res = await fetch("http://numbersapi.com/random?min=1&max=200");
-  let trivia = await res.text();
-  trivia.trim();
+const fetchMotivationalQuote = async function () {
+  let res = await fetch("https://motivational-spark-api.vercel.app/api/quotes/random/10");
+  let trivia = await res.json();
   console.log(trivia);
-  triviaArray = trivia.split("\n");
-  const randomIndex = Math.floor(Math.random() * triviaArray.length);
-  const randomTrivia = triviaArray[randomIndex].trim();
-  li.innerText = trivia;
-  numberTrivia.append(li);
-  triviaArray = li;
 };
 
 triviaButton.addEventListener("click", function () {
   numberTrivia.classList.remove("hide");
-  fetchNumberTrivia();
+  fetchMotivationalQuote();
   triviaButton.classList.add("hide");
   finishButton.classList.remove("hide");
 });
